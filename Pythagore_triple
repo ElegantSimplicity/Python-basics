@@ -1,0 +1,16 @@
+# In ra các bộ 3 số nguyên là cạnh của tam giác vuông
+# Cách 1: thông thường
+n=30
+
+Pythagore_triple=[]
+for a in range(1,n):
+    for b in range(a,n):
+        for c in range(b,n):
+            if a*a+b*b == c*c:
+                Pythagore_triple.append((a,b,c))
+
+print(Pythagore_triple)
+
+# Cách 2: dùng comprehension
+print([(a,b,c) for a in range(1,n) for b in range(a,n) for c in range(b,n) if a*a+b*b == c*c])
+
