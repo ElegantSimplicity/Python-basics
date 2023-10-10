@@ -7,7 +7,7 @@
 import time
 countdown = 10
 newYear = 0
-for i in range(countdown,0,-1):
+for i in range(countdown,newYear,-1):
     print(i)
     time.sleep(1)
     
