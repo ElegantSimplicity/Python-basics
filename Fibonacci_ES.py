@@ -6,11 +6,30 @@ import time
 # Cách 1: dùng while
 def fib(n):
     a, b = 1, 1
-    i=2
-    while i < n:
+    k=2
+    while k < n:
         a, b = b, a+b
-        i +=1
+        k +=1
     return b
+
+# https://codereview.stackexchange.com/a/165060/237307
+# Cách 1b: mã đẹp ES 
+def fibb(n) :
+    a, b = 1, 1
+    while n > 2 :
+        a, b, n = b, a+b, n-1
+    return b
+
+# Cách 1c: mã đẹp ES
+def fibc(n):
+    a, b, k = 1, 1, 2
+    while k < n :
+        a, b, k = b, a+b, k+1
+    return b
+
+#n=18
+#for i in range(1,n):
+ #  print(fib(i),fibb(i),fibc(i))
 
 # Cách 2: dùng for
 def fibo(n):
@@ -20,17 +39,20 @@ def fibo(n):
     return b
 
 ###############################
-# hồi qui tuy đẹp nhưng rất tốn time
+# Cách 3: hồi qui tuy đẹp nhưng rất tốn time
 def Fib(n):    # for n-th Fibonacci
     if n==1: return 1
     elif n==2: return 1
     else: return Fib(n-1)+Fib(n-2)
 
+
 #print(Fib(50))          # n=50 đã tính mệt mỏi lắm rồi
+
 
 ##############################
 # use the technique of memoization: cache = bộ nhớ đệm
 # (xem Dynamic Programming)
+# Tuy nhiên lại tốn bộ nhớ cho cache
 # https://codereview.stackexchange.com/a/165004/237307
 
 cache = {}          # bộ nhớ đệm
@@ -86,4 +108,4 @@ for i in range(1, n - 1):
     if((fib(i) % 10 == 0) and (fib(i+1) % 10 == 1)):
             break
  
-print("Sequence is repeating after index", i)
+print("Sequence is repeating after index", i)   # 60
