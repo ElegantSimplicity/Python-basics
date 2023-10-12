@@ -1,4 +1,5 @@
 # Rock Paper Scissor
+# by Le Huy Tien
 import random
 
 player = input('Please select Rock, Paper, or Scissors: ').lower()
