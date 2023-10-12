@@ -8,5 +8,5 @@ print('computer selected: ', computer)
 
 if (computer,player) in {('rock','paper'),('paper','scissors'),('scissors','rock')}:
     print("player WON")
-elif player == computer: print("Tie")
+elif player == computer: print("TIE")
 else: print("computer WON")
