@@ -1,5 +1,6 @@
+# similar https://stackoverflow.com/a/2795421/10503796
 def determine_winner(player, computer):
-    winner = (3 + player - computer) % 3
+    winner = (player - computer + 3) % 3
     match winner:
         case 0: return 'TIE'
         case 1: return 'Player WON'
@@ -7,7 +8,7 @@ def determine_winner(player, computer):
 
 import random
 print('Welcome to Rock, Paper, Scissors!')
-convention={0 : 'Rock', 1 : 'Paper', 2 : 'Scissors'}
+convention = {0 : 'Rock', 1 : 'Paper', 2 : 'Scissors'}
 while True:
     player = int(input('Please select 0 for Rock, 1 for Paper, 2 for Scissors: '))
     computer = random.choice([0, 1, 2])
