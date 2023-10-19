@@ -8,7 +8,7 @@ I now increase it to 50_000
 def fibo(n):
     # a beautiful idea: number as string
     if n == 1: return '1'
-    elif n == 2: return '1'
+    elif n == 2: return '1'    # '2' for Lucas sequence
     else:
         a, b = '1', '1'
         for i in range(3, n + 1):
@@ -30,3 +30,6 @@ print('t = ',t,' with ',len(t))
 print('Probabilities of the digits of the whole Fibonacci sequence:')
 for i in range(10):
     print(f'  {str(i)} is {t.count(str(i)) * 100 /len(t):>5.2f} %')
+print('\nConjecture: for any initial conditions (1,1) or (1,2)')
+print('the digits of the whole sequence x_{n+2}=x_{n+1}+x_n')
+print('follows the uniform distribution!')
