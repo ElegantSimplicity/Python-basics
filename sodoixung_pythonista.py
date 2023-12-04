@@ -11,3 +11,10 @@ digits= [int(x) for x in str(x)]
 print(digits)  # để làm gì biết không?
 print(f'{x} là số đối xứng.') if digits==digits[::-1] else print(f'{x} KHÔNG là số đối xứng.')
 
+# Nên viết thành hàm
+def is_symmetric_number(n):
+    digits = [int(n) for n in str(n)]
+    if digits == digits[::-1]: return True
+    else: return False
+
+print(f'{x} là số đối xứng.') if is_symmetric_number(x) else print(f'{x} KHÔNG là số đối xứng.')
