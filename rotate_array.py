@@ -1,21 +1,34 @@
-# Xoay mảng cho trước đi d vị trí
-# (Liên quan mật mã Cesar: xoay xâu cho trước đi d vị trí trong bảng chữ cái)
+# Xoay mảng cho trước đi k vị trí
+# (Liên quan mật mã Cesar: xoay xâu cho trước đi k vị trí trong bảng chữ cái)
 
-def rotate_array(arr, d):
+# Hàm này tốn bộ nhớ
+def rotate_arrayA(arr, k):
     n = len(arr)
     rotated_arr = [0] * n
     for i in range(n):
-        rotated_arr[i] = arr[(i + d) % n]
+        rotated_arr[i] = arr[(i + k) % n]
     return rotated_arr
 
-# my = Lê Huy đấy ^^ Hàm này hay hơn hàm sách viết
-def my_rotate_array(arr, d):
+# Hàm này gọn nhưng vẫn tốn bộ nhớ
+def rotate_arrayB(arr, d):
     return arr[d:] + arr[:d]
 
-arr = [1, 2, 3, 4, 5, 6, 7, 8]
-# Number of positions to rotate
-d = 3
+# Nhớ luôn vào mảng ban đầu
+def rotate_arrayC(arr, k):
+    n = len(arr)
+    k %= n
+    for i in range(k):
+        temp = arr[0]
+        for j in range(n-1):
+            arr[j] = arr[j+1]
+        arr[n-1] = temp
+    return arr
 
-print("Original Array:", arr)
-print("Rotated Array:", rotate_array(arr, d))
-print("My Rotated Array:", my_rotate_array(arr, d))
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+d = 3  # Number of positions to rotate
+
+print("Initial array:", arr)
+print("Rotated array:", rotate_arrayA(arr, d))
+print("Rotated array:", rotate_arrayB(arr, d))
+print("Rotated array:", rotate_arrayC(arr, d))
+
