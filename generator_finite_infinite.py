@@ -3,6 +3,7 @@
 # 2 loại hàm sinh: hữu hạn và vô hạn      # 2 types of generators: finite and infinite
 # Bạn hãy sử dụng cho linh hoạt, hợp lý!
 # https://www.geeksforgeeks.org/use-yield-keyword-instead-return-keyword-python/
+# Bài tập: Dùng generator, tính tổng các số chính phương không quá n
 
 def SquaresA():
     i = 1
