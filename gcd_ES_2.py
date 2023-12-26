@@ -8,7 +8,7 @@ def gcd(a, b):
 
 def lcm(a, b):
     """Tính bội chung nhỏ nhất của 2 số tự nhiên"""
-    return int((a * b) / gcd(a,b))
+    return (a * b) // gcd(a,b)
 
 a = int(input('Nhập số tự nhiên a = '))
 b = int(input('Nhập số tự nhiên b = '))
