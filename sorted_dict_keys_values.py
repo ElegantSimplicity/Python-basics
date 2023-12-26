@@ -1,5 +1,6 @@
 # Program 73: sắp xếp từ điển theo key; theo value
 # https://drive.google.com/file/d/1Lf76ElJmwZU3cF7DMrDBun9wTSVtrbfF/view
+# # https://github.com/ElegantSimplicity/Python-basics/blob/main/sorted_dict_keys_values.py
 # Từ điển (dict) là kiểu dữ liệu gồm các bộ key : value
 # Chú ý: key trong lệnh sorted khác với key trong từ điển
 # (xem https://www.w3schools.com/python/ref_func_sorted.asp)
