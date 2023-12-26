@@ -8,7 +8,7 @@ def gcd(a, b):
 
 def lcm(a, b):
     """Calculate lcm of a and b"""
-    return int((a * b) / gcd(a,b))
+    return (a * b) // gcd(a,b)
 
 # Driver code
 if __name__ == "__main__":
