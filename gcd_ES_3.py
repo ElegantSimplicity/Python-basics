@@ -20,3 +20,10 @@ print(math.gcd(a,b,c))               # OK!
 print(np.gcd(np.gcd(a,b),c))         # sửa lỗi, nhưng dài
 #print(sympy.gcd(a,b,c))             # lỗi
 print(sympy.gcd(sympy.gcd(a,b),c))   # sửa lỗi, nhưng dài
+
+print(f'BCNN({a},{b},{c}) là:')
+print(math.lcm(a,b,c))               # OK!
+#print(np.lcm(a,b,c))                # lỗi
+print(np.lcm(np.lcm(a,b),c))         # sửa lỗi, nhưng dài
+#print(sympy.lcm(a,b,c))             # lỗi
+print(sympy.lcm(sympy.lcm(a,b),c))   # sửa lỗi, nhưng dài
