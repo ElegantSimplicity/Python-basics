@@ -18,7 +18,6 @@ import sympy
 #print(sympy.isprime(abc)) 
 
 """ Testing: bây giờ hãy làm cho hàm is_prime() của bạn tốt như hàm isprime() của sympy """
-import math     # for isnan()
 
 def is_prime(n):
     """Kiểm tra n có là số nguyên tố hay không"""
