@@ -29,7 +29,9 @@ class Collatz:
 
         return sequence, length, max_value
 
-a = Collatz(13)
+a = Collatz(18)
+#print('Độ dài: ', a.calculate_all().[1])     # không đẹp lắm!
+
 sequence, length, max_value = a.calculate_all()
 print('Dãy Collatz: ', sequence)
 print('Độ dài: ', length)
