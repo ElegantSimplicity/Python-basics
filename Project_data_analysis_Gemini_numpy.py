@@ -1,9 +1,24 @@
 import numpy as np
 
+score_12A = {
+'Nam' : 3,
+'Hoài': 5,
+'Liên': 9,
+'Lan': 7,
+'Phương': 8,
+'Xuân': 9,
+'Mai': 1,
+'Tuyết': 9,
+'Bông': 1,
+'Tuyến': 6
+}
 # Tạo mảng tên và điểm
-names = np.array(["Hoài", "Lan", "Liên", "Mai", "Nam", "Phương", "Tuyết", "Tuyến", "Xuân", "Bông"])
-scores = np.array([5, 7, 9, 1, 3, 8, 9, 6, 9, 1])
-
+#names = np.array(['Nam', 'Hoài', 'Liên', 'Lan', 'Phương', 'Xuân', 'Mai', 'Tuyết', 'Bông', 'Tuyến'])
+#scores = np.array([3, 5, 9, 7, 8, 9, 1, 9, 1, 6])
+names = np.array(list(score_12A.keys()))
+scores = np.array(list(score_12A.values()))
+print(names)
+print(scores)
 # Sắp xếp danh sách theo tên (kèm theo điểm)
 sorted_by_name = np.lexsort([scores, names])
 
